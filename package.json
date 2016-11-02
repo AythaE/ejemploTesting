@@ -1,0 +1,39 @@
+{
+	"name": "primeritoDia",
+	"productName": "Primerito día",
+	"version": "1.0.0",
+	"description": "Charla introductoria sobre testing del código de un proyecto",
+	"license": "GPL-3.0",
+	"repository": "germaaan/primeritoDia",
+	"author": {
+		"name": "German Martinez",
+		"email": "germaaan@gmail.com",
+		"url": "germaaan.github.io"
+	},
+	"main": "main.js",
+	"keywords": [
+		"testing"
+	],
+	"private": true,
+	"dependencies": {
+		"body-parser": "^1.15.0",
+		"cookie-parser": "^1.4.0",
+		"debug": "^2.2.0",
+		"ejs": "^2.3.1",
+		"express": "^4.13.4",
+		"morgan": "^1.7.0",
+		"node-sass": "^3.6.0",
+		"serve-favicon": "^2.3.0"
+	},
+	"devDependencies": {
+		"bower": "^1.7.7"
+	},
+	"scripts": {
+		"start": "node app",
+		"libs": "bower install",
+		"sass": "node-sass public/style/scss/*.scss -o public/style/css",
+		"postinstall": "npm run libs && npm run sass",
+		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js",
+		"jshint": "jshint *.json *.js app/*.js"
+	}
+}

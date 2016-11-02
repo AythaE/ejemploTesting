@@ -1,0 +1,20 @@
+{
+	"name": "primeritoDia",
+	"productName": "Primerito día",
+	"version": "1.0.0",
+	"description": "Charla introductoria sobre testing del código de un proyecto",
+	"license": "GPL-3.0",
+	"repository": "germaaan/primeritoDia",
+	"author": {
+		"name": "German Martinez",
+		"email": "germaaan@gmail.com",
+		"url": "germaaan.github.io"
+	},
+	"keywords": [
+		"testing"
+	],
+	"private": true,
+	"dependencies": {
+		"bootstrap": "bootstrap-sass-official#3.3.5"
+	}
+}
