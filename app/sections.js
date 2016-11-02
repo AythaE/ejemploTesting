@@ -17,8 +17,6 @@ exports.create_get = function(req, res) {
 
 // Acción de crear
 exports.create_post = function(req, res) {
-    console.log("PROBANDO: " + req.body.nombre);
-
     new Cosa({
         nombre: req.body.nombre,
         contenido: req.body.contenido,
@@ -30,6 +28,7 @@ exports.create_post = function(req, res) {
     });
 };
 
+// Página de leer
 exports.read = function(req, res) {
     Cosa.
     find().
@@ -38,8 +37,20 @@ exports.read = function(req, res) {
         if (err) return next(err);
 
         res.render('read', {
-            title: "Leer",
+            title: "Listar",
             cosas: cosas
         });
+    });
+};
+
+// Devuelve el listado en JSON
+exports.json = function(req, res) {
+    Cosa.
+    find().
+    sort('-fecha').
+    exec(function(err, cosas) {
+        if (err) return next(err);
+
+        return res.end(JSON.stringify(cosas));
     });
 };

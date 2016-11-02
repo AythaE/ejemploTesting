@@ -6,6 +6,7 @@ module.exports = function(app) {
     app.get("/create", sections.create_get);
     app.post("/create", sections.create_post);
     app.get("/read", sections.read);
+    app.get("/json", sections.json);
 
     // Captura errores
     app.use(function(req, res, next) {
