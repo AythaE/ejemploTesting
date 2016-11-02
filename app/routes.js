@@ -5,7 +5,7 @@ module.exports = function(app) {
     app.get("/", sections.index);
     app.get("/create", sections.create_get);
     app.post("/create", sections.create_post);
-    //app.get("/read", sections.read);
+    app.get("/read", sections.read);
 
     // Captura errores
     app.use(function(req, res, next) {

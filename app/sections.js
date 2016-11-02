@@ -17,6 +17,8 @@ exports.create_get = function(req, res) {
 
 // Acción de crear
 exports.create_post = function(req, res) {
+    console.log("PROBANDO: "+req.body.nombre);
+
     new Cosa({
         nombre: req.body.nombre,
         contenido: req.body.contenido,
