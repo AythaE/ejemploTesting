@@ -43,6 +43,30 @@ exports.read = function(req, res) {
     });
 };
 
+// Acción de actualizar
+exports.update = function(req, res) {
+    Cosa.findById(req.params.id, function(err, cosa) {
+        cosa.fecha = Date.now();
+        cosa.save(function(err, cosa, count) {
+            if (err) return next(err);
+
+            res.redirect('/json');
+        });
+    });
+};
+
+// Acción de borrar
+exports.delete = function(req, res) {
+    Cosa.findById(req.params.id, function(err, cosa) {
+
+        cosa.remove(function(err, cosa) {
+            if (err) return next(err);
+
+            res.redirect('/json');
+        });
+    });
+};
+
 // Devuelve el listado en JSON
 exports.json = function(req, res) {
     Cosa.

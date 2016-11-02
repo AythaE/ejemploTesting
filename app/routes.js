@@ -6,6 +6,8 @@ module.exports = function(app) {
     app.get("/create", sections.create_get);
     app.post("/create", sections.create_post);
     app.get("/read", sections.read);
+    app.get("/update/:id", sections.update);
+    app.get("/delete/:id", sections.delete);
     app.get("/json", sections.json);
 
     // Captura errores
