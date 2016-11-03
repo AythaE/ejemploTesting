@@ -10,3 +10,12 @@ node_js:
   - 4.4.5
 
 sudo: false
+
+before_script:
+  - sleep 2
+script:
+  - npm test
+  - npm run jshint
+
+after_success:
+  - npm run coverage
