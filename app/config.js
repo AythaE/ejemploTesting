@@ -1,7 +1,7 @@
 "use strict";
 
 // Inicializa mongoose
-require("./db");
+require("./model");
 
 var bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");

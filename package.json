@@ -1,41 +1,49 @@
 {
-	"name": "primerito-dia",
-	"version": "1.0.0",
-	"description": "Charla introductoria sobre testing del código de un proyecto",
-	"license": "GPL-3.0",
-	"repository": "germaaan/primeritoDia",
-	"author": {
-		"name": "German Martinez",
-		"email": "germaaan@gmail.com",
-		"url": "germaaan.github.io"
-	},
-	"main": "main.js",
-	"keywords": [
-		"testing"
-	],
-	"private": true,
-	"dependencies": {
-		"body-parser": "^1.15.2",
-		"cookie-parser": "^1.4.3",
-		"ejs": "^2.5.2",
-		"express": "^4.14.0",
-		"method-override": "^2.3.6",
-		"mongoose": "^4.6.5",
-		"morgan": "^1.7.0",
-		"node-sass": "^3.10.1",
-		"serve-favicon": "^2.3.0"
-	},
-	"devDependencies": {
-		"bower": "^1.7.9",
-		"js-beautify": "^1.6.4",
-		"jshint": "^2.9.4"
-	},
-	"scripts": {
-		"start": "node app",
-		"libs": "bower install",
-		"sass": "node-sass public/style/scss/*.scss -o public/style/css",
-		"postinstall": "npm run libs && npm run sass",
-		"beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js",
-		"jshint": "jshint *.json *.js app/*.js"
-	}
+  "name": "primerito-dia",
+  "version": "1.0.0",
+  "description": "Charla introductoria sobre testing del código de un proyecto",
+  "license": "GPL-3.0",
+  "repository": "germaaan/primeritoDia",
+  "author": {
+    "name": "German Martinez",
+    "email": "germaaan@gmail.com",
+    "url": "germaaan.github.io"
+  },
+  "main": "main.js",
+  "keywords": [
+    "testing"
+  ],
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.2",
+    "express": "^4.14.0",
+    "method-override": "^2.3.6",
+    "mongoose": "^4.6.5",
+    "morgan": "^1.7.0",
+    "node-sass": "^3.10.1",
+    "serve-favicon": "^2.3.0"
+  },
+  "devDependencies": {
+    "bower": "^1.7.9",
+    "chai": "^3.5.0",
+    "istanbul": "^0.4.5",
+    "js-beautify": "^1.6.4",
+    "jshint": "^2.9.4",
+    "mocha": "^3.1.2",
+    "should": "^11.1.1",
+    "sinon": "^1.17.6",
+    "supertest": "^2.0.1"
+  },
+  "scripts": {
+    "start": "node app",
+    "test": "mocha",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec test/**/*",
+    "libs": "bower install",
+    "sass": "node-sass public/style/scss/*.scss -o public/style/css",
+    "postinstall": "npm run libs && npm run sass",
+    "beautify": "js-beautify --indent-with-tabs --brace-style collapse -r *.json *.js app/*.js",
+    "jshint": "jshint *.json *.js app/*.js"
+  }
 }
