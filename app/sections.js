@@ -102,6 +102,7 @@ exports.json = function(req, res) {
 			});
 		}
 
+		res.setHeader('Content-Type', 'application/json');
 		return res.end(JSON.stringify(cosas));
 	});
 };

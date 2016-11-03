@@ -39,7 +39,7 @@
   "scripts": {
     "start": "node app",
     "test": "mocha",
-    "coverage": "istanbul cover node_modules/.bin/_mocha -- -- -u exports -R spec test/**/*",
+    "coverage": "istanbul cover node_modules/.bin/_mocha -- -- test/*",
     "libs": "bower install",
     "sass": "node-sass public/style/scss/*.scss -o public/style/css",
     "postinstall": "npm run libs && npm run sass",
