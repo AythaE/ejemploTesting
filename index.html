@@ -75,38 +75,97 @@
                     </ul>
                 </section>
                 <section>
-                  <h3>Tipos de pruebas funcionales</h3>
-                  <ul>
-                    <li class=fragment><strong>Pruebas unitarias:</strong> verifica el correcto funcionamiento por separado de una porción del código. Métodos "públicos" no triviales. </li>
-                    <li class=fragment><strong>Pruebas de integración:</strong> verifica que todas las porciones del código funcionan juntas como parte del sistema.</li>
-                  </ul>
+                    <h3>Tipos de pruebas funcionales</h3>
+                    <ul>
+                        <li class=fragment><strong>Pruebas unitarias:</strong> verifica el correcto funcionamiento por separado de una porción del código. Métodos "públicos" no triviales. </li>
+                        <li class=fragment><strong>Pruebas de integración:</strong> verifica que todas las porciones del código funcionan juntas como parte del sistema.</li>
+                    </ul>
                 </section>
                 <section>
-                  <h3>Tipos de pruebas estructurales</h3>
-                  <ul>
-                    <li class=fragment><strong>Pruebas de cobertura</strong>: evalua cómo de completo es nuestro conjunto de pruebas en función del porcentaje de código comprobado.</li>
-                  </ul>
+                    <h3>Tipos de pruebas estructurales</h3>
+                    <ul>
+                        <li class=fragment><strong>Pruebas de cobertura</strong>: evalua cómo de completo es nuestro conjunto de pruebas en función del porcentaje de código comprobado.</li>
+                    </ul>
                 </section>
                 <section>
-                  <h3>¿Por qué son necesarias las pruebas unitarias?</h3>
-                  <img class=fragment alt="image" src="images/blame.png" height="450" />
+                    <h3>¿Pero son necesarias las pruebas unitarias?</h3>
+                    <img class=fragment alt="image" src="images/testing.png" height="550" />
                 </section>
                 <section>
-                  <h3>¿Por qué son necesarias las pruebas unitarias?</h3>
-                  <img class=fragment alt="image" src="images/engineer.png" height="450" />
+                    <h3>¿Por qué son necesarias las pruebas unitarias?</h3>
+                    <img class=fragment alt="image" src="images/blame.png" height="450" />
                 </section>
                 <section>
-                  <h3>¿Por qué son necesarias las pruebas de integración?</h3>
-                  <img class=fragment alt="image" src="images/integration.gif" height="450" />
+                    <h3>¿Por qué son necesarias las pruebas unitarias?</h3>
+                    <img class=fragment alt="image" src="images/engineer.png" height="450" />
                 </section>
                 <section>
-                  <h3>¿Por qué son necesarias las pruebas de cobertura?</h3>
-                  <img class=fragment alt="image" src="images/desierto.png" height="450" />
+                    <h3>¿Por qué son necesarias las pruebas de integración?</h3>
+                    <img class=fragment alt="image" src="images/integration.gif" height="450" />
+                </section>
+                <section>
+                    <h3>¿Por qué son necesarias las pruebas de cobertura?</h3>
+                    <img class=fragment alt="image" src="images/desierto.png" height="450" />
                 </section>
             </section>
 
             <section>
-                <h2>¿Preguntas?</h2>
+                <section>
+                    <h3>¿Qué puedo usar para hacer pruebas unitarias en Node.js?</h3>
+                    <h4>Metodología de desarrollo de las pruebas</h4>
+                    <ul>
+                        <li><strong>TDD: </strong> Test-driven development o desarrollo guiado por pruebas</li>
+                        <li><strong>BDD: </strong> Behavior-Driven Development o desarrollo guiado por comportamiento</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>¿Qué puedo usar para hacer pruebas unitarias en Node.js?</h3>
+                    <h4>Seleccionar el framework:</h4>
+                    <ul>
+                        <li><img alt="image" src="images/jasmine.png" height="100"/> <strong>Jasmine</strong>: <a href="http://jasmine.github.io/">http://jasmine.github.io/</a></li>
+                        <li><img alt="image" src="images/mocha.png" height="100"/> <strong>Mocha</strong>: <a href="https://mochajs.org/">https://mochajs.org/</a> </li>
+                        <li><img alt="image" src="images/qunit.png" height="100"/> <strong>QUnit</strong>: <a href="https://qunitjs.com/">https://qunitjs.com/</a> </li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>¿Qué puedo usar para hacer pruebas unitarias en Node.js?</h3>
+                    <h4>Seleccionar una librería (si es necesario):</h4>
+                    <ul>
+                        <li><img alt="image" src="images/chai.png" height="100"/> <strong>Chai</strong>: <a href="http://chaijs.com/">http://chaijs.com/</a></li>
+                        <li><img alt="image" src="images/should.png" height="100"/> <strong>Should</strong>: <a href="http://shouldjs.github.io/">http://shouldjs.github.io/</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>¿Qué puedo usar para hacer pruebas unitarias en Node.js?</h3>
+                    <h4>Seleccionar una librería (si es necesario):</h4>
+                    <img alt="image" src="images/chai_example.png" />
+                </section>
+                <section>
+                    <h3>¿Qué puedo usar para hacer pruebas unitarias en Node.js?</h3>
+                    <h4>Seleccionar una librería (si es necesario):</h4>
+                    <ul>
+                        <li><strong>Supertest</strong>: <a href="https://github.com/visionmedia/supertest">https://github.com/visionmedia/supertest</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>¿Qué puedo usar para hacer pruebas de integración en Node.js (y otros lenguajes)?</h3>
+                    <ul>
+                        <li><img alt="image" src="images/travis.png" height="100"/> <strong>Travis</strong>: <a href="https://travis-ci.org/">https://travis-ci.org/</a></li>
+                        <li><img alt="image" src="images/jenkins.png" height="100"/> <strong>Jenkins</strong>: <a href="https://jenkins.io/">https://jenkins.io/</a></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>¿Qué puedo usar para hacer pruebas de cobertura?</h3>
+                    <ul>
+                      <li><strong>Blanket.js</strong>: <a href="http://blanketjs.org/">http://blanketjs.org/</a></li>
+                      <li><strong>Istanbul</strong>: <a href="https://github.com/gotwarlost/istanbul">https://github.com/gotwarlost/istanbul</a></li>
+                      <li><strong>JSCover</strong>: <a href="https://tntim96.github.io/JSCover/">https://tntim96.github.io/JSCover/</a></li>
+                    </ul>
+                </section>
+            </section>
+            <section>
+                <h2>Ha llegado el momento de pasar a la práctica...</h2>
+                <img class=fragment alt="image" src="images/fua.gif" height="450" />
             </section>
         </div>
     </div>
