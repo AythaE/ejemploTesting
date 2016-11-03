@@ -22,13 +22,16 @@ module.exports = function(app) {
 
 	// Favicon
 	app.use(favicon("./public/favicon/favicon.ico"));
+
 	// Logger de solicitudes HTTP
-	app.use(logger("dev"));
+	if (process.env.NODE_ENV !== "test") {
+		app.use(logger("dev"));
+	}
 
 	// Parseadores
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({
-		extended: true
+		extended: false
 	}));
 	app.use(cookieParser());
 

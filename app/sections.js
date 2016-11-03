@@ -25,9 +25,9 @@ exports.create_post = function(req, res) {
 		fecha: Date.now()
 	}).save(function(err) {
 		if (err) {
-			res.status(err.status);
-			res.render("error", {
-				mensaje: err.message,
+			res.json({
+				status: false,
+				error: "No se ha podido realizar la acción de crear."
 			});
 		}
 
@@ -42,10 +42,12 @@ exports.read = function(req, res) {
 	sort("-fecha").
 	exec(function(err, cosas) {
 		if (err) {
-			res.status(err.status);
-			res.render("error", {
-				mensaje: err.message,
-			});
+			if (err) {
+				res.json({
+					status: false,
+					error: "No se ha podido realizar la acción de leer."
+				});
+			}
 		}
 
 		res.render("read", {
@@ -57,13 +59,14 @@ exports.read = function(req, res) {
 
 // Acción de actualizar
 exports.update = function(req, res) {
-	Cosa.findById(req.params.id, function(err, cosa) {
+	Cosa.
+	findById(req.params.id, function(err, cosa) {
 		cosa.fecha = Date.now();
 		cosa.save(function(err) {
 			if (err) {
-				res.status(err.status);
-				res.render("error", {
-					mensaje: err.message,
+				res.json({
+					status: false,
+					error: "No se ha podido realizar la acción de actualizar."
 				});
 			}
 
@@ -74,13 +77,13 @@ exports.update = function(req, res) {
 
 // Acción de borrar
 exports.delete = function(req, res) {
-	Cosa.findById(req.params.id, function(err, cosa) {
-
+	Cosa.
+	findById(req.params.id, function(err, cosa) {
 		cosa.remove(function(err) {
 			if (err) {
-				res.status(err.status);
-				res.render("error", {
-					mensaje: err.message,
+				res.json({
+					status: false,
+					error: "No se ha podido realizar la acción de borrar."
 				});
 			}
 
@@ -96,13 +99,13 @@ exports.json = function(req, res) {
 	sort("-fecha").
 	exec(function(err, cosas) {
 		if (err) {
-			res.status(err.status);
-			res.render("error", {
-				mensaje: err.message,
+			res.json({
+				status: false,
+				error: "No se ha podido realizar la acción de listar."
 			});
 		}
 
-		res.setHeader('Content-Type', 'application/json');
+		res.setHeader("Content-Type", "application/json");
 		return res.end(JSON.stringify(cosas));
 	});
 };
