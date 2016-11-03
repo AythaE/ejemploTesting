@@ -32,7 +32,6 @@
 		"js-beautify": "^1.6.4",
 		"jshint": "^2.9.4",
 		"mocha": "^3.1.2",
-		"should": "^11.1.1",
 		"supertest": "^2.0.1"
 	},
 	"engines": {

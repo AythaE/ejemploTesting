@@ -12,8 +12,6 @@ var app = require("../app.js");
 var expect = require("chai").expect;
 var assert = require("chai").assert;
 
-var should = require("should");
-
 var request = require("supertest");
 
 describe("Prueba de acceso", function() {
@@ -42,7 +40,7 @@ describe("Prueba de acceso", function() {
 			.expect(302, done);
 	});
 
-	it("Verificar valor de una cosa [chai]", function(done) {
+	it("Verificar valor de una cosa", function(done) {
 		Cosa.
 		findOne({
 			"nombre": "prueba"
@@ -56,24 +54,6 @@ describe("Prueba de acceso", function() {
 			}
 
 			assert.equal(cosa.contenido, "prueba");
-			done();
-		});
-	});
-
-	it("Verificar valor de una cosa [should]", function(done) {
-		Cosa.
-		findOne({
-			"nombre": "prueba"
-		}).
-		exec(function(err, cosa) {
-			if (err) {
-				res.json({
-					status: false,
-					error: "No se ha podido realizar la acción de actualizar."
-				});
-			}
-
-			cosa.contenido.should.be.equal("prueba");
 			done();
 		});
 	});
